@@ -1,4 +1,7 @@
 package calculator.context;
 
-public class Context {
+import java.util.Deque;
+
+public interface Context {
+
 }
