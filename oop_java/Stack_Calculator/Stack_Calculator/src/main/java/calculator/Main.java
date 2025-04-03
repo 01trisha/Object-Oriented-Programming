@@ -1,6 +1,6 @@
 package calculator;
 
-public class Stack_Calculator {
+public class Main {
     public static void main(String[] args) {
 
     }
