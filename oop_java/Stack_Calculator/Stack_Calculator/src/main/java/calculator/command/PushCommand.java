@@ -17,6 +17,7 @@ public class PushCommand implements Command {
         if (!isNumber(arg)){
             try {
                 double val = context.get(arg);
+                context.push(val);
             }catch (UnknownVariableException e){
                 throw new CalculatorException("Unknown variable name: " + arg, e);
             }

@@ -1,6 +1,8 @@
 package calculator.factory;
 
 import calculator.command.Command;
+import calculator.exception.CalculatorException;
+import calculator.exception.InvalidArgumentsException;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,31 +12,27 @@ public class CommandFactory {
     private final Properties commandProperties = new Properties();
 
     public CommandFactory() {
-        try (InputStream input = CommandFactory.class.getResourceAsStream("commands.properties")) {
-            commandProperties.load(input);
-            if (commandProperties == null) {
-                throw new IllegalStateException("Ошибка чтения файла commands.properties");
+        try (InputStream input = CommandFactory.class.getResourceAsStream("/commands.properties")) {
+            if (input == null) {
+                throw new CalculatorException("Файл commands.properties не найден!");
             }
-        } catch (IOException e) {
-            throw new RuntimeException("Ошибка чтения файла commands.properties", e);
-
+            commandProperties.load(input);
+        } catch (IOException | CalculatorException e) {
+            throw new RuntimeException("Ошибка загрузки commands.properties: " + e.getMessage(), e);
         }
     }
 
-    public Command createCommand(String commandName) {
+    public Command createCommand(String commandName) throws CalculatorException {
         String className = commandProperties.getProperty(commandName);
-
-        if (className == null){
-            throw new IllegalArgumentException("Неизвестная команда " + commandName);
+        if (className == null) {
+            throw new InvalidArgumentsException("Неизвестная команда: " + commandName);
         }
 
-        try{
+        try {
             Class<?> commandClass = Class.forName(className);
-            Command newCommand = (Command) commandClass.getDeclaredConstructor().newInstance();
-            return newCommand;
-        }catch(Exception e){
-            throw new RuntimeException("Ошибка создания новой команды" + e);
+            return (Command) commandClass.getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            throw new CalculatorException("Ошибка создания команды '" + commandName + "': " + e.getMessage(), e);
         }
     }
 }
-

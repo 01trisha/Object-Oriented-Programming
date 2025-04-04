@@ -2,4 +2,4 @@ DEFINE a 4
 PUSH a
 SQRT
 PRINT
-#вывод 2
+# вывод 2

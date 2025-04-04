@@ -15,7 +15,7 @@ public class PopCommand implements Command {
         try {
             context.pop();
         }catch (StackUnderflowException e){
-            throw new CalculatorException("Need 1 or more elements in stack", e);
+            throw new CalculatorException("Need 1 or more elements in stack: " + e.getMessage());
         }
     }
 }

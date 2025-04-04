@@ -14,7 +14,7 @@ public class PrintCommand implements Command {
         try {
             System.out.println(context.peek());
         }catch (StackUnderflowException e){
-            throw new CalculatorException("Cannot PRINT last element", e);
+            throw new CalculatorException("Cannot PRINT last element" + e.getMessage() + ":");
         }
     }
 }

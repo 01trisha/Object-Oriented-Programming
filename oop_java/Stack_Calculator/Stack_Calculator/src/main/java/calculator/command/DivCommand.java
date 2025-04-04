@@ -17,7 +17,7 @@ public class DivCommand implements Command {
             double arg2 = context.pop();
             double arg1 = context.pop();
             if (arg2 == 0.0){
-                throw new DivisionByNullException(arg2);
+                throw new DivisionByNullException(arg1);
             }
             double result = arg1 / arg2;
 
