@@ -1,0 +1,64 @@
+2025-04-11 05:08:08.601 [main] INFO  Stack_Calculator - Starting program with parameters [src/main/resources/input.txt]
+2025-04-11 05:08:08.604 [main] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-11 05:08:08.604 [main] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-11 05:08:08.605 [main] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-11 05:08:08.605 [main] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-11 05:08:08.606 [main] INFO  calculator.context.Calculator - Create object of calculator
+2025-04-11 05:08:08.606 [main] INFO  calculator.context.Calculator - Run calculator
+2025-04-11 05:08:08.606 [main] DEBUG calculator.context.Calculator - Create reader from file: src/main/resources/input.txt
+2025-04-11 05:08:08.609 [main] INFO  calculator.context.Calculator - Create reader
+2025-04-11 05:08:08.609 [main] DEBUG calculator.context.Calculator - Read line: DEFINE a 100
+2025-04-11 05:08:08.609 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=DEFINE, args=[a, 100]
+2025-04-11 05:08:08.610 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-11 05:08:08.610 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-11 05:08:08.610 [main] DEBUG calculator.context.Calculator - Execute command: DEFINE, args: [a, 100]
+2025-04-11 05:08:08.610 [main] INFO  calculator.factory.CommandFactory - Create command: DEFINE
+2025-04-11 05:08:08.611 [main] INFO  calculator.factory.CommandFactory - Command DEFINE created successfully
+2025-04-11 05:08:08.611 [main] DEBUG calculator.command.DefineCommand - Execute command: DefineCommand, args: [a, 100]
+2025-04-11 05:08:08.611 [main] DEBUG calculator.command.DefineCommand - Check if variable name 'a' is a number
+2025-04-11 05:08:08.611 [main] DEBUG calculator.command.DefineCommand - Check if variable value '100' is a number
+2025-04-11 05:08:08.611 [main] INFO  calculator.context.ExecutableContex - Storing variable 'a' with value: 100.0
+2025-04-11 05:08:08.611 [main] INFO  calculator.command.DefineCommand - Variable 'a' with value '100.0' added
+2025-04-11 05:08:08.611 [main] DEBUG calculator.context.Calculator - Read line: PUSH a
+2025-04-11 05:08:08.611 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PUSH, args=[a]
+2025-04-11 05:08:08.611 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-11 05:08:08.611 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-11 05:08:08.611 [main] DEBUG calculator.context.Calculator - Execute command: PUSH, args: [a]
+2025-04-11 05:08:08.611 [main] INFO  calculator.factory.CommandFactory - Create command: PUSH
+2025-04-11 05:08:08.612 [main] INFO  calculator.factory.CommandFactory - Command PUSH created successfully
+2025-04-11 05:08:08.612 [main] DEBUG calculator.command.PushCommand - Execute command: PushCommand, args: [a]
+2025-04-11 05:08:08.612 [main] DEBUG calculator.command.PushCommand - Try to parse number: a
+2025-04-11 05:08:08.612 [main] DEBUG calculator.command.PushCommand - Not a number: a
+2025-04-11 05:08:08.612 [main] DEBUG calculator.command.PushCommand - Try to get variable: a
+2025-04-11 05:08:08.612 [main] INFO  calculator.context.ExecutableContex - Retrieved variable 'a' with value: 100.0
+2025-04-11 05:08:08.612 [main] DEBUG calculator.command.PushCommand - Variable found, pushing value: 100.0
+2025-04-11 05:08:08.612 [main] INFO  calculator.context.ExecutableContex - Pushing value to stack: 100.0
+2025-04-11 05:08:08.612 [main] DEBUG calculator.context.Calculator - Read line: SQRT
+2025-04-11 05:08:08.612 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=SQRT, args=[]
+2025-04-11 05:08:08.612 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-11 05:08:08.612 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-11 05:08:08.612 [main] DEBUG calculator.context.Calculator - Execute command: SQRT, args: []
+2025-04-11 05:08:08.612 [main] INFO  calculator.factory.CommandFactory - Create command: SQRT
+2025-04-11 05:08:08.612 [main] INFO  calculator.factory.CommandFactory - Command SQRT created successfully
+2025-04-11 05:08:08.612 [main] DEBUG calculator.command.SqrtCommand - Executing SQRT command
+2025-04-11 05:08:08.612 [main] INFO  calculator.context.ExecutableContex - Popped value from stack: 100.0
+2025-04-11 05:08:08.612 [main] DEBUG calculator.command.SqrtCommand - Pushing result to stack: 10.0
+2025-04-11 05:08:08.612 [main] INFO  calculator.context.ExecutableContex - Pushing value to stack: 10.0
+2025-04-11 05:08:08.613 [main] DEBUG calculator.context.Calculator - Read line: PRINT
+2025-04-11 05:08:08.613 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PRINT, args=[]
+2025-04-11 05:08:08.613 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-11 05:08:08.613 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-11 05:08:08.613 [main] DEBUG calculator.context.Calculator - Execute command: PRINT, args: []
+2025-04-11 05:08:08.613 [main] INFO  calculator.factory.CommandFactory - Create command: PRINT
+2025-04-11 05:08:08.613 [main] INFO  calculator.factory.CommandFactory - Command PRINT created successfully
+2025-04-11 05:08:08.613 [main] DEBUG calculator.command.PrintCommand - Executing command: PRINT
+2025-04-11 05:08:08.613 [main] INFO  calculator.context.ExecutableContex - Peeked value from stack: 10.0
+2025-04-11 05:08:08.613 [main] INFO  calculator.command.PrintCommand - Print value from stack: 10.0
+2025-04-11 05:08:08.613 [main] DEBUG calculator.context.Calculator - Read line: # вывод 10
+2025-04-11 05:08:08.613 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=#, args=[вывод, 10]
+2025-04-11 05:08:08.613 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-11 05:08:08.613 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-11 05:08:08.613 [main] DEBUG calculator.context.Calculator - Execute command: #, args: [вывод, 10]
+2025-04-11 05:08:08.614 [main] INFO  calculator.factory.CommandFactory - Create command: #
+2025-04-11 05:08:08.614 [main] INFO  calculator.factory.CommandFactory - Command # created successfully
+2025-04-11 05:08:08.614 [main] INFO  calculator.command.CommentCommand - Executing comment command: вывод 10

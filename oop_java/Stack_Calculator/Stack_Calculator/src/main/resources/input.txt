@@ -1,5 +1,5 @@
-DEFINE a 4
+DEFINE a 100
 PUSH a
 SQRT
 PRINT
-# вывод 2
+# вывод 10

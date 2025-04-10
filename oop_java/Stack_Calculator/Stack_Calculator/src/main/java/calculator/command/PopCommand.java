@@ -1,21 +1,28 @@
 package calculator.command;
 
 import calculator.context.ExecutableContex;
-import calculator.exception.CalculatorException;
-import calculator.exception.InvalidArgumentsException;
-import calculator.exception.StackUnderflowException;
+import calculator.exception.CalculatorRuntimeException;
+import calculator.exception.InvalidArgumentsRuntimeException;
+import calculator.exception.StackUnderflowRuntimeException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class PopCommand implements Command {
+    private static final Logger logger = LogManager.getLogger(PopCommand.class);
+
     @Override
-    public void execute(ExecutableContex context, String[] args) throws CalculatorException {
+    public void execute(ExecutableContex context, String[] args) throws CalculatorRuntimeException {
+        logger.debug("Executing POP command");
+
         if (args != null && args.length != 0){
-            throw new InvalidArgumentsException("POP doesn't need arguments");
+            throw new InvalidArgumentsRuntimeException("POP doesn't need arguments");
         }
 
-        try {
-            context.pop();
-        }catch (StackUnderflowException e){
-            throw new CalculatorException("Need 1 or more elements in stack: " + e.getMessage());
+        if (context.size() < 1) {
+            throw new StackUnderflowRuntimeException("POP");
         }
+
+        context.pop();
+        logger.debug("Poped value from stack");
     }
 }
