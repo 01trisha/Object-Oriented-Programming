@@ -41,7 +41,7 @@ public class ExecutableContex {
         return value;
     }
 
-    public double size() {
+    public int size() {
         return stack.size();
     }
 
