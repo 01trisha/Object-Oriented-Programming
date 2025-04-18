@@ -67,4 +67,4 @@ java -jar build/libs/Stack_Calculator-1.0-SNAPSHOT-all.jar
 
 # Пример работы
 
-![Example](https://github.com/user-attachments/assets/4f58b5c3-e27c-4088-9033-f835418b912e)
+![Example](https://github.com/user-attachments/assets/4f58b5c3-e27c-4088-9033-f835418b912e.gif)
