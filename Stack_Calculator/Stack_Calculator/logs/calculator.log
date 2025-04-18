@@ -2930,3 +2930,196 @@
 2025-04-18 10:14:40.422 [Test worker] DEBUG calculator.utils.ParserLines - Parsed line: command=PUSH, args=[10]
 2025-04-18 10:14:40.422 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
 2025-04-18 10:14:40.422 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:27:47.556 [main] INFO  Stack_Calculator - Starting program with parameters []
+2025-04-18 10:27:47.560 [main] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 10:27:47.560 [main] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 10:27:47.560 [main] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 10:27:47.562 [main] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 10:27:47.562 [main] INFO  calculator.context.Calculator - Create object of calculator
+2025-04-18 10:27:47.562 [main] INFO  calculator.context.Calculator - Run calculator
+2025-04-18 10:27:47.562 [main] DEBUG calculator.context.Calculator - Create reader from stdin
+2025-04-18 10:27:47.564 [main] INFO  calculator.context.Calculator - Create reader
+2025-04-18 10:27:56.443 [main] DEBUG calculator.context.Calculator - Read line: згPUSH 10
+2025-04-18 10:27:56.444 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=згPUSH, args=[10]
+2025-04-18 10:27:56.445 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 10:27:56.445 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:27:56.445 [main] DEBUG calculator.context.Calculator - Execute command: згPUSH, args: [10]
+2025-04-18 10:27:56.445 [main] INFO  calculator.factory.CommandFactory - Create command: згPUSH
+2025-04-18 10:27:56.445 [main] ERROR calculator.context.Calculator - Error of executing command: Unknown command: згPUSH
+2025-04-18 10:28:05.672 [main] INFO  Stack_Calculator - Starting program with parameters []
+2025-04-18 10:28:05.675 [main] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 10:28:05.675 [main] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 10:28:05.675 [main] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 10:28:05.675 [main] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 10:28:05.675 [main] INFO  calculator.context.Calculator - Create object of calculator
+2025-04-18 10:28:05.675 [main] INFO  calculator.context.Calculator - Run calculator
+2025-04-18 10:28:05.676 [main] DEBUG calculator.context.Calculator - Create reader from stdin
+2025-04-18 10:28:05.678 [main] INFO  calculator.context.Calculator - Create reader
+2025-04-18 10:28:13.736 [main] DEBUG calculator.context.Calculator - Read line: PUSH 10
+2025-04-18 10:28:13.737 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PUSH, args=[10]
+2025-04-18 10:28:13.737 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 10:28:13.737 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:28:13.738 [main] DEBUG calculator.context.Calculator - Execute command: PUSH, args: [10]
+2025-04-18 10:28:13.738 [main] INFO  calculator.factory.CommandFactory - Create command: PUSH
+2025-04-18 10:28:13.740 [main] INFO  calculator.factory.CommandFactory - Command PUSH created successfully
+2025-04-18 10:28:13.740 [main] DEBUG calculator.command.PushCommand - Execute command: PushCommand, args: [10]
+2025-04-18 10:28:13.740 [main] DEBUG calculator.command.PushCommand - Try to parse number: 10
+2025-04-18 10:28:13.740 [main] DEBUG calculator.command.PushCommand - Number parsed, pushing value: 10.0
+2025-04-18 10:28:13.740 [main] INFO  calculator.context.ExecutableContex - Pushing value to stack: 10.0
+2025-04-18 10:28:17.860 [main] DEBUG calculator.context.Calculator - Read line: PUSH 20
+2025-04-18 10:28:17.860 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PUSH, args=[20]
+2025-04-18 10:28:17.860 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 10:28:17.860 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:28:17.860 [main] DEBUG calculator.context.Calculator - Execute command: PUSH, args: [20]
+2025-04-18 10:28:17.860 [main] INFO  calculator.factory.CommandFactory - Create command: PUSH
+2025-04-18 10:28:17.860 [main] INFO  calculator.factory.CommandFactory - Command PUSH created successfully
+2025-04-18 10:28:17.860 [main] DEBUG calculator.command.PushCommand - Execute command: PushCommand, args: [20]
+2025-04-18 10:28:17.860 [main] DEBUG calculator.command.PushCommand - Try to parse number: 20
+2025-04-18 10:28:17.860 [main] DEBUG calculator.command.PushCommand - Number parsed, pushing value: 20.0
+2025-04-18 10:28:17.861 [main] INFO  calculator.context.ExecutableContex - Pushing value to stack: 20.0
+2025-04-18 10:28:20.896 [main] DEBUG calculator.context.Calculator - Read line: +
+2025-04-18 10:28:20.896 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=+, args=[]
+2025-04-18 10:28:20.897 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 10:28:20.897 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:28:20.897 [main] DEBUG calculator.context.Calculator - Execute command: +, args: []
+2025-04-18 10:28:20.897 [main] INFO  calculator.factory.CommandFactory - Create command: +
+2025-04-18 10:28:20.898 [main] INFO  calculator.factory.CommandFactory - Command + created successfully
+2025-04-18 10:28:20.898 [main] INFO  calculator.context.ExecutableContex - Popped value from stack: 20.0
+2025-04-18 10:28:20.898 [main] INFO  calculator.context.ExecutableContex - Popped value from stack: 10.0
+2025-04-18 10:28:20.898 [main] INFO  calculator.command.AddCommand - Add 20.0 and 10.0, result: 30.0
+2025-04-18 10:28:20.898 [main] INFO  calculator.context.ExecutableContex - Pushing value to stack: 30.0
+2025-04-18 10:28:24.507 [main] DEBUG calculator.context.Calculator - Read line: PRINT
+2025-04-18 10:28:24.507 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PRINT, args=[]
+2025-04-18 10:28:24.507 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 10:28:24.507 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:28:24.508 [main] DEBUG calculator.context.Calculator - Execute command: PRINT, args: []
+2025-04-18 10:28:24.508 [main] INFO  calculator.factory.CommandFactory - Create command: PRINT
+2025-04-18 10:28:24.510 [main] INFO  calculator.factory.CommandFactory - Command PRINT created successfully
+2025-04-18 10:28:24.510 [main] DEBUG calculator.command.PrintCommand - Executing command: PRINT
+2025-04-18 10:28:24.510 [main] INFO  calculator.context.ExecutableContex - Peeked value from stack: 30.0
+2025-04-18 10:28:24.511 [main] INFO  calculator.command.PrintCommand - Print value from stack: 30.0
+2025-04-18 10:28:30.309 [main] DEBUG calculator.context.Calculator - Read line: SQRT
+2025-04-18 10:28:30.310 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=SQRT, args=[]
+2025-04-18 10:28:30.310 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 10:28:30.310 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:28:30.310 [main] DEBUG calculator.context.Calculator - Execute command: SQRT, args: []
+2025-04-18 10:28:30.310 [main] INFO  calculator.factory.CommandFactory - Create command: SQRT
+2025-04-18 10:28:30.312 [main] INFO  calculator.factory.CommandFactory - Command SQRT created successfully
+2025-04-18 10:28:30.312 [main] DEBUG calculator.command.SqrtCommand - Executing SQRT command
+2025-04-18 10:28:30.312 [main] INFO  calculator.context.ExecutableContex - Popped value from stack: 30.0
+2025-04-18 10:28:30.312 [main] DEBUG calculator.command.SqrtCommand - Pushing result to stack: 5.477225575051661
+2025-04-18 10:28:30.313 [main] INFO  calculator.context.ExecutableContex - Pushing value to stack: 5.477225575051661
+2025-04-18 10:28:32.620 [main] DEBUG calculator.context.Calculator - Read line: PRINT
+2025-04-18 10:28:32.620 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PRINT, args=[]
+2025-04-18 10:28:32.620 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 10:28:32.621 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 10:28:32.621 [main] DEBUG calculator.context.Calculator - Execute command: PRINT, args: []
+2025-04-18 10:28:32.621 [main] INFO  calculator.factory.CommandFactory - Create command: PRINT
+2025-04-18 10:28:32.621 [main] INFO  calculator.factory.CommandFactory - Command PRINT created successfully
+2025-04-18 10:28:32.621 [main] DEBUG calculator.command.PrintCommand - Executing command: PRINT
+2025-04-18 10:28:32.621 [main] INFO  calculator.context.ExecutableContex - Peeked value from stack: 5.477225575051661
+2025-04-18 10:28:32.621 [main] INFO  calculator.command.PrintCommand - Print value from stack: 5.477225575051661
+2025-04-18 15:29:52.860 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:29:52.863 [Test worker] ERROR calculator.context.ExecutableContex - Unknown variable name: y
+2025-04-18 15:29:52.864 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:29:52.864 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 1.0
+2025-04-18 15:29:52.864 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 2.0
+2025-04-18 15:29:52.865 [Test worker] INFO  calculator.context.ExecutableContex - Popped value from stack: 2.0
+2025-04-18 15:29:52.865 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:29:52.865 [Test worker] ERROR calculator.context.ExecutableContex - Stack underflow on pop
+2025-04-18 15:29:52.866 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:29:52.866 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 2.71
+2025-04-18 15:29:52.866 [Test worker] INFO  calculator.context.ExecutableContex - Peeked value from stack: 2.71
+2025-04-18 15:29:52.867 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:29:52.867 [Test worker] INFO  calculator.context.ExecutableContex - Storing variable 'x' with value: 42.0
+2025-04-18 15:29:52.867 [Test worker] INFO  calculator.context.ExecutableContex - Retrieved variable 'x' with value: 42.0
+2025-04-18 15:29:52.867 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:29:52.868 [Test worker] ERROR calculator.context.ExecutableContex - Stack underflow on peek
+2025-04-18 15:29:52.868 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:29:52.868 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 3.14
+2025-04-18 15:29:52.868 [Test worker] INFO  calculator.context.ExecutableContex - Popped value from stack: 3.14
+2025-04-18 15:29:52.869 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:29:52.870 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:29:52.870 [Test worker] INFO  calculator.factory.CommandFactory - Create command: INVALID_COMMAND
+2025-04-18 15:29:52.870 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:29:52.870 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:29:52.870 [Test worker] INFO  calculator.factory.CommandFactory - Create command: PUSH
+2025-04-18 15:29:52.871 [Test worker] INFO  calculator.factory.CommandFactory - Command PUSH created successfully
+2025-04-18 15:29:52.871 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:29:52.871 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:29:52.872 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:29:52.872 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:29:52.872 [Test worker] INFO  calculator.factory.CommandFactory - Create command: 
+2025-04-18 15:29:52.877 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:29:52.877 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:29:52.877 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:29:52.877 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:29:52.878 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:29:52.878 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:29:52.879 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:29:52.879 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:29:52.879 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:29:52.880 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:29:52.880 [Test worker] DEBUG calculator.utils.ParserLines - Parsed line: command=DEFINE, args=[, , , , x, , , , , 15]
+2025-04-18 15:29:52.880 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:29:52.880 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:29:52.880 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:29:52.880 [Test worker] DEBUG calculator.utils.ParserLines - Parsed line: command=POP, args=[]
+2025-04-18 15:29:52.880 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:29:52.880 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:29:52.881 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:29:52.881 [Test worker] DEBUG calculator.utils.ParserLines - Parsed line: command=PUSH, args=[10]
+2025-04-18 15:29:52.881 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:29:52.881 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:35:08.582 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:08.586 [Test worker] ERROR calculator.context.ExecutableContex - Unknown variable name: y
+2025-04-18 15:35:08.587 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:08.588 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 1.0
+2025-04-18 15:35:08.588 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 2.0
+2025-04-18 15:35:08.588 [Test worker] INFO  calculator.context.ExecutableContex - Popped value from stack: 2.0
+2025-04-18 15:35:08.588 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:08.588 [Test worker] ERROR calculator.context.ExecutableContex - Stack underflow on pop
+2025-04-18 15:35:08.589 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:08.589 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 2.71
+2025-04-18 15:35:08.589 [Test worker] INFO  calculator.context.ExecutableContex - Peeked value from stack: 2.71
+2025-04-18 15:35:08.590 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:08.590 [Test worker] INFO  calculator.context.ExecutableContex - Storing variable 'x' with value: 42.0
+2025-04-18 15:35:08.590 [Test worker] INFO  calculator.context.ExecutableContex - Retrieved variable 'x' with value: 42.0
+2025-04-18 15:35:08.590 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:08.591 [Test worker] ERROR calculator.context.ExecutableContex - Stack underflow on peek
+2025-04-18 15:35:08.591 [Test worker] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:08.591 [Test worker] INFO  calculator.context.ExecutableContex - Pushing value to stack: 3.14
+2025-04-18 15:35:08.591 [Test worker] INFO  calculator.context.ExecutableContex - Popped value from stack: 3.14
+2025-04-18 15:35:08.592 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:35:08.593 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:35:08.593 [Test worker] INFO  calculator.factory.CommandFactory - Create command: INVALID_COMMAND
+2025-04-18 15:35:08.593 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:35:08.593 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:35:08.593 [Test worker] INFO  calculator.factory.CommandFactory - Create command: PUSH
+2025-04-18 15:35:08.594 [Test worker] INFO  calculator.factory.CommandFactory - Command PUSH created successfully
+2025-04-18 15:35:08.594 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:35:08.594 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:35:08.595 [Test worker] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:35:08.595 [Test worker] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:35:08.595 [Test worker] INFO  calculator.factory.CommandFactory - Create command: 
+2025-04-18 15:35:08.600 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:35:08.600 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:35:08.600 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:35:08.600 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:35:08.601 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:35:08.601 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:35:08.602 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:35:08.602 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:35:08.602 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:35:08.603 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:35:08.603 [Test worker] DEBUG calculator.utils.ParserLines - Parsed line: command=DEFINE, args=[, , , , x, , , , , 15]
+2025-04-18 15:35:08.603 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:35:08.603 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:35:08.603 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:35:08.603 [Test worker] DEBUG calculator.utils.ParserLines - Parsed line: command=POP, args=[]
+2025-04-18 15:35:08.603 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:35:08.604 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:35:08.604 [Test worker] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:35:08.604 [Test worker] DEBUG calculator.utils.ParserLines - Parsed line: command=PUSH, args=[10]
+2025-04-18 15:35:08.604 [Test worker] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:35:08.604 [Test worker] DEBUG calculator.utils.ParsedArgs - getArgs called

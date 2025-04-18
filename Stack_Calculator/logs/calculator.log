@@ -1,0 +1,38 @@
+2025-04-18 15:35:54.630 [main] INFO  Stack_Calculator - Starting program with parameters []
+2025-04-18 15:35:54.631 [main] INFO  calculator.factory.CommandFactory - Create object of factory
+2025-04-18 15:35:54.631 [main] INFO  calculator.factory.CommandFactory - Loaded commands.properties successfully
+2025-04-18 15:35:54.631 [main] INFO  calculator.utils.ParserLines - Create object of ParserLines
+2025-04-18 15:35:54.632 [main] INFO  calculator.context.ExecutableContex - Create object of Context
+2025-04-18 15:35:54.632 [main] INFO  calculator.context.Calculator - Create object of calculator
+2025-04-18 15:35:54.632 [main] INFO  calculator.context.Calculator - Run calculator
+2025-04-18 15:35:54.632 [main] DEBUG calculator.context.Calculator - Create reader from stdin
+2025-04-18 15:35:54.636 [main] INFO  calculator.context.Calculator - Create reader
+2025-04-18 15:36:03.320 [main] DEBUG calculator.context.Calculator - Read line: PUSH 20
+2025-04-18 15:36:03.320 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PUSH, args=[20]
+2025-04-18 15:36:03.321 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:36:03.321 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:36:03.322 [main] DEBUG calculator.context.Calculator - Execute command: PUSH, args: [20]
+2025-04-18 15:36:03.322 [main] INFO  calculator.factory.CommandFactory - Create command: PUSH
+2025-04-18 15:36:03.323 [main] INFO  calculator.factory.CommandFactory - Command PUSH created successfully
+2025-04-18 15:36:03.323 [main] DEBUG calculator.command.PushCommand - Execute command: PushCommand, args: [20]
+2025-04-18 15:36:03.323 [main] DEBUG calculator.command.PushCommand - Try to parse number: 20
+2025-04-18 15:36:03.323 [main] DEBUG calculator.command.PushCommand - Number parsed, pushing value: 20.0
+2025-04-18 15:36:03.323 [main] INFO  calculator.context.ExecutableContex - Pushing value to stack: 20.0
+2025-04-18 15:36:05.438 [main] DEBUG calculator.context.Calculator - Read line: +
+2025-04-18 15:36:05.438 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=+, args=[]
+2025-04-18 15:36:05.439 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:36:05.439 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:36:05.439 [main] DEBUG calculator.context.Calculator - Execute command: +, args: []
+2025-04-18 15:36:05.439 [main] INFO  calculator.factory.CommandFactory - Create command: +
+2025-04-18 15:36:05.440 [main] INFO  calculator.factory.CommandFactory - Command + created successfully
+2025-04-18 15:36:05.441 [main] ERROR calculator.context.Calculator - Error of executing command: Stack has not enough arguments for ADD
+2025-04-18 15:36:08.352 [main] DEBUG calculator.context.Calculator - Read line: PRINT
+2025-04-18 15:36:08.353 [main] DEBUG calculator.utils.ParserLines - Parsed line: command=PRINT, args=[]
+2025-04-18 15:36:08.353 [main] DEBUG calculator.utils.ParsedArgs - getCommand called
+2025-04-18 15:36:08.353 [main] DEBUG calculator.utils.ParsedArgs - getArgs called
+2025-04-18 15:36:08.354 [main] DEBUG calculator.context.Calculator - Execute command: PRINT, args: []
+2025-04-18 15:36:08.354 [main] INFO  calculator.factory.CommandFactory - Create command: PRINT
+2025-04-18 15:36:08.355 [main] INFO  calculator.factory.CommandFactory - Command PRINT created successfully
+2025-04-18 15:36:08.355 [main] DEBUG calculator.command.PrintCommand - Executing command: PRINT
+2025-04-18 15:36:08.355 [main] INFO  calculator.context.ExecutableContex - Peeked value from stack: 20.0
+2025-04-18 15:36:08.355 [main] INFO  calculator.command.PrintCommand - Print value from stack: 20.0

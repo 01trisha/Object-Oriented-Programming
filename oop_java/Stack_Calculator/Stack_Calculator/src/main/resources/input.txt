@@ -1,5 +1,0 @@
-DEFINE a 100
-PUSH a
-SQRT
-PRINT
-# вывод 10
