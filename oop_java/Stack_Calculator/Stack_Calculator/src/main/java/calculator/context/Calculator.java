@@ -49,7 +49,7 @@ public class Calculator {
         }
     }
 
-    private InputReader createReader(String[] args) throws CalculatorIOException {
+    InputReader createReader(String[] args) throws CalculatorIOException {
         if (args.length > 1){
             throw new CalculatorIOException("Too many arguments: " + Arrays.toString(args) + ". Command can be run without arguments or with 1 argument");
         }

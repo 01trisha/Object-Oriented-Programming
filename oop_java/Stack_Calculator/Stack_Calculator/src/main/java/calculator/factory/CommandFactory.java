@@ -2,7 +2,6 @@ package calculator.factory;
 
 import calculator.command.Command;
 import calculator.exception.CalculatorIOException;
-import calculator.exception.CalculatorRuntimeException;
 import calculator.exception.InvalidArgumentsRuntimeException;
 import calculator.exception.UnknownCommandRuntimeException;
 import org.apache.logging.log4j.LogManager;
@@ -30,6 +29,9 @@ public class CommandFactory {
     }
 
     public Command createCommand(String commandName) {
+        if (commandName == null) {
+            throw new InvalidArgumentsRuntimeException("Command name is null");
+        }
         logger.info("Create command: {}", commandName);
         String className = commandProperties.getProperty(commandName);
         if (className == null) {

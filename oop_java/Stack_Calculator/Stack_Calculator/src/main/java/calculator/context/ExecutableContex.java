@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 
-public class ExecutableContex {
+public class ExecutableContex{
     private static final Logger logger = LogManager.getLogger(ExecutableContex.class);
     private final LinkedList<Double> stack = new LinkedList<>();
     private final Map<String, Double> variable = new HashMap<>();

@@ -38,7 +38,7 @@ public class PushCommand implements Command {
         }
     }
 
-    private boolean isNumber(String str) {
+    protected boolean isNumber(String str) {
         try{
             logger.debug("Try to parse number: {}", str);
             Double.parseDouble(str);

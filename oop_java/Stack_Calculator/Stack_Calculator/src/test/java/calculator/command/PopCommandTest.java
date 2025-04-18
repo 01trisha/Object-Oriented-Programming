@@ -5,20 +5,23 @@ import calculator.exception.InvalidArgumentsRuntimeException;
 import calculator.exception.StackUnderflowRuntimeException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-class PopCommandTest {
+@ExtendWith(MockitoExtension.class)
+public class PopCommandTest {
 
     private PopCommand popCommand;
+    @Mock
     private ExecutableContex context;
 
     @BeforeEach
     void setUp() {
         popCommand = new PopCommand();
-        context = mock(ExecutableContex.class);
     }
 
     @Test

@@ -39,7 +39,7 @@ public class DefineCommand implements Command {
 
     }
 
-    private boolean isNumber(String str) {
+    protected boolean isNumber(String str) {
         try{
             Double.parseDouble(str);
             return true;

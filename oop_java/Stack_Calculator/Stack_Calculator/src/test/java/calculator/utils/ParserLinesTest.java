@@ -1,40 +1,61 @@
 package calculator.utils;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParserLinesTest {
-    private ParserLines parser;
+
+    private ParserLines parserLines;
 
     @BeforeEach
     void setUp() {
-        parser = new ParserLines();
+        parserLines = new ParserLines();
     }
 
     @Test
-    void testParseValidLine() {
-        String input = "PUSH 5";
-        String expected = "PUSH";
-        String result = parser.parse(input).getCommand();
+    void testParseCommandWithArgs() {
+        String input = "PUSH 10";
+        ParsedArgs result = parserLines.parse(input);
 
-        assertEquals(expected, result);
+        assertNotNull(result);
+        assertEquals("PUSH", result.getCommand());
+        assertArrayEquals(new String[]{"10"}, result.getArgs());
     }
 
     @Test
-    void testParseEmptyLine() {
-        String input = "";
-        String[] result = parser.parse(input).getArgs();
+    void testParseCommandWithoutArgs() {
+        String input = "POP";
+        ParsedArgs result = parserLines.parse(input);
 
-        assertEquals(0, result.length);
+        assertNotNull(result);
+        assertEquals("POP", result.getCommand());
+        assertArrayEquals(new String[]{}, result.getArgs());
     }
 
     @Test
-    void testParseLineWithExtraSpaces() {
-        String input = "   PRINT    ";
-        String[] expected = {"PRINT"};
-        String[] result = parser.parse(input).getArgs();
+    void testParseNullLineReturnsNull() {
+        assertNull(parserLines.parse(null));
+    }
 
-        assertArrayEquals(expected, result);
+    @Test
+    void testParseEmptyLineReturnsNull() {
+        assertNull(parserLines.parse(""));
+    }
+
+    @Test
+    void testParseLineWithOnlySpacesReturnsNull() {
+        assertNull(parserLines.parse("    "));
+    }
+
+    @Test
+    void testParseWithMultipleSpacesBetweenArguments() {
+        String input = "DEFINE     x     15";
+        ParsedArgs result = parserLines.parse(input);
+
+        assertNotNull(result);
+        assertEquals("DEFINE", result.getCommand());
+        assertArrayEquals(new String[]{"", "", "", "", "x", "", "", "", "", "15"}, result.getArgs());
     }
 }
