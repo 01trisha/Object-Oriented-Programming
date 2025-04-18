@@ -45,9 +45,9 @@ o Log4j ( http://logging.apache.org/log4j/1.2/
 
 # Реализация
 
-- Фабричный метод [[CommandFactory.java]]
+- Фабричный метод CommandFactory.java
 - Использование JUnit5 + Mockito
-- Используется properties файл с названием команды и ее полным именем [[Stack_Calculator/Stack_Calculator/src/main/resources/commands.properties]]
-- Для добавления нового функционала в калькулятор, нужно реализовать новую команду которая имплементируюет [[Command.java]] и добавить ее название команды + полный адрес в properties
+- Используется properties файл с названием команды и ее полным именем src/main/resources/commands.properties
+- Для добавления нового функционала в калькулятор, нужно реализовать новую команду которая имплементируюет Command.java и добавить ее название команды + полный адрес в properties
 
 
