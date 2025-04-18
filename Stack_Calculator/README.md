@@ -63,9 +63,8 @@ cd Stack_Calculator
 
 ./gradlew shadowJar  
 java -jar build/libs/Stack_Calculator-1.0-SNAPSHOT-all.jar
-
 ```
 
 # Пример работы
 
-![Example](example.gif)
+![Example](https://github.com/01trisha/oop/blob/main/Stack_Calculator/example.gif)
